@@ -1,5 +1,6 @@
-# HeadLinr (the finalized version of product as chrome extension is for private usage only)  
+# HeadLinr  
 Senior Design Project created by a team of four students
+(the finalized version of product as chrome extension is only for private usage) 
 
 Project Description - Overview	HeadLinr is a Chrome extension that collects top news from CNN, BBC and FOX news and provides news based on user preference.
 	
