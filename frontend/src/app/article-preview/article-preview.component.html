@@ -1,0 +1,7 @@
+<div id="article-preview-block">
+  <a [routerLink]="['/home']" class="btn btn-dark" id="back-button">Back</a>
+  <h1 style="text-align: center;">{{ title }}</h1>
+  <p style="text-align: center;">{{ date | date: "mediumDate" }}</p>
+  <p id="article-content">{{ preview }}</p>
+  <a href="{{ source }}" class="btn btn-primary btn-lg btn-block">Read more</a>
+</div>

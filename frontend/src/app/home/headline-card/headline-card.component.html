@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem">
+  <a [routerLink]="['/article', id]">
+    <div *ngIf="thumbnail.length > 0">
+      <img class="card-img-top" src="{{ thumbnail }}" alt="Card image cap" />
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ title }}</h5>
+      <!-- <p class="card-text">{{ description }}</p> -->
+      <p class="card-text">
+        <small class="text-muted">{{ date | date: "mediumDate" }}</small>
+      </p>
+    </div>
+  </a>
+</div>

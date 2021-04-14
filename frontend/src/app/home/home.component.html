@@ -1,0 +1,39 @@
+<div *ngIf="!headlines?.length">
+  <h1>There seem to be an error with our sever, please come back later</h1>
+</div>
+<div *ngIf="headlines?.length">
+  <h1 style="text-align: center">Headlines</h1>
+
+  <div id="headline-section">
+    <div *ngFor="let headline of headlines">
+      <app-headline-card
+        class="card"
+        [id]="headline.id"
+        [thumbnail]="headline.thumbnail"
+        [title]="headline.title"
+        [description]="headline.description"
+        [source]="headline.source"
+        [date]="headline.date"
+      ></app-headline-card>
+    </div>
+  </div>
+
+  <div *ngIf="_authService.loggedIn()">
+    <h1 style="text-align: center">News you might like</h1>
+    <!-- can later replace you with username -->
+
+    <div id="headline-section">
+      <div *ngFor="let headline of headlines">
+        <app-personalized-news-card
+          class="card"
+          [id]="headline.id"
+          [thumbnail]="headline.thumbnail"
+          [title]="headline.title"
+          [description]="headline.description"
+          [source]="headline.source"
+          [date]="headline.date"
+        ></app-personalized-news-card>
+      </div>
+    </div>
+  </div>
+</div>
